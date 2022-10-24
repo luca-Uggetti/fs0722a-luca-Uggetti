@@ -1,0 +1,153 @@
+<!--FATTO PER SPIEGARE COS'E' UN TAG E SPIEGARE UN HTML
+    è un linguaggio di MARCATURA che serve a STRUTTURARE E DESCRIVERE IL CONTENUTO DI UNA PAGINA WEB
+    Un tag ha sempre questa forma:
+    1)<nometag>= APERTURA
+    2)</nometag>=CHIUSURA
+CI SONO ANCHE I SELF-CLOSING, hanno la chiusura all'interno del TAG DI APERTURA, prima del simbolo ">"
+
+I tag possono essere ANNIDATI
+ci puoi mettere anche gli ATTRIBUTI, come nel pre-corso, tipologia di attributo:
+
+1)<nome tag attributo="valore"></nome tag>
+2)<nome tag attributo:valore;></nome tag>
+
+serie di tag:
+1- html:5, per dire che tipologia sto utilizzando, meglio codice più innovativo 
+2-<!DOCTYPE html> browser sto iniziando a scrivere con un HTML:5, MOLTO IMPORTANTE PER
+    L'INTERPRETAZIONE DEI TAG CHE SCIVERO'
+3- <html></html>
+4- <head></head>
+5- <body></body>
+
+HEAD:
+all'interno ci metto tutti i tag DESCRITTIVI
+all'interno di <head></head> ci metterò il tag META
+"<meta charset/>" 
+charset= descrive set di caratteri che sto utilizzando, in default
+<meta charset="utf-8"/>
+dopodichè anche il tag meta di TITLE:
+<title>CI METTO IL TITOLO DELLA PAGINA - brand</title>
+per far capire di che parla
+
+quindi la struttura sarà:
+<!DOCTYPE html/>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> titolo della pagina - brand</title>
+    </head>
+    <body>
+    </body>
+</html>
+
+Tra  uno <style></style>
+faccio il commento con /* */
+
+CARATTERI SPECIALI in pratica quando voglio che si facciano vedere dei 
+simboli scritti in html in output
+
+"spazio vuoto" &nbsp
+"<" &it
+">" &gt
+"&" &amp
+"doppio apice" &quot
+"apice singolo" &apos
+"euro" &euro
+"simbolo di copiright" &copy
+etc..
+etc..
+
+il tag
+ "content ="descrizione sintetica e mirata della pagina"
+
+-->
+
+<!--  MACROCATEGORIA DI TAG
+
+TAG LINEA= tendono ad affiancarsi l'uno con l'altro
+
+TAG BLOCCO= manda a capo i contenuti
+
+TAG HEADINGS:
+-vanno d h1 a h6, più grande è il numero, più è piccola la scritta
+ questi sono tag blocco
+ N.B.= l'hi deve SEMPRE essere messo in OGNI PAGINA,si può diminuire con
+    dei tag in "css", ma deve sempre esserci
+
+    h2= titolo secondario, titoletto che completa le informazioni
+        che completano l'H1
+l'"h" che uso non deve essere dato dalla grandezza, ma è dato dall'importanza di quello che scrivo
+
+- <p></p>= è un tag block, molto spesso utilizzato sotto un titolo,
+            serve per scrivere un paragrafo
+
+TAG LISTA:
+-ol = lista ordinata, quindi numerata, per fare i punti, ci metto:
+        <il>quello che voglio scrivere</li>
+-ul= lista puntta, e funziona 
+per farli in modo più veloce:
+ul>li*quante volte e voglio{quello che ci voglio scrivere} e poi schiaccio "tab"
+
+per la SOTTOLISTA, basta che vado a capo in un <li></li> e ci scrivo un "ol/ul" e  i terrà direttamenteil conto di tutto
+
+LISTA DEFINITA:
+<dl>
+    <dt> html</dt>  dt= definition term
+    <dd> linguaggio di marcatura semantica </dd> dd= per la definizione di quello che abbiamo scritto in <dt></dt>
+
+TAG ADDRESS= va a definire contenuti come "cotatti, indirizzo, etc.."
+
+TAG BLOCKQUOTE:
+per mostrare una CITAZIONE,  se ci metto l'attributo cite="" posso mettere da dove ho preso la citazione
+
+TAG STRONG:
+è un tag che mette in GRASSETTO la parola e per il web, la mette ance tra le parole chiave
+o quelle più importanti
+
+tag EM:
+mette in corsivo e aggiunge la semantica 
+
+tag DEL:
+viene utilizzato per barrare le parole
+
+tag INS:
+usato per sottolineare le cose
+
+tag MARK:
+usato per EVIDENZIARE LE COSE
+
+tag ABBR:
+quando devo far vedere che è un abbreviazione, e con
+l'attributo "title="" metto l'acronimo
+
+con BR vado a capo, è "self-closing".
+il tag HR, faccio un separatore
+per la didascalia dell'immaginw uso:
+<figure>
+    <img src=""/>
+    <figcaption> scrivo la didascalia </figcaption>
+
+    tag A:
+    permette di navigare da una pagina ad un'altra
+
+    con l'attributo "href", dico che se clicchi andrai nella pagina
+    il nome che voglio che si clicchi, lo metto tra l'apertura e la chiusura
+    questo tag ammette qualsiasi cosa, anche un'immagine cliccabile
+    possiamo mandare l'utente fuori dal sito con "https", sennò cercherà sempre all'interno 
+    nel sito che hai creato, posso usare anche l'attributo "target=_"blank"" 
+    con l'attributo " href=mailto: scrivo una mail" " apre direttamente il portale per le mail
+    per scriverci dentro
+    con l'attributo:
+    href="tel:numero di telefono" ci mette i codizione di chiamare
+    con l'attributo:
+    href="img/un immagine" fa si che si guardi la foto
+    con:
+    href="img/un immagine" download fa si che la foto si scarichi, ma la foto caricaa deve essere nel dominio
+
+    con :
+    
+    href="https://wa.me/numero di telefono con prefisso", scrive direttamente su whatsapp
+    e se ci aggiungo pure "?text= messaggio scritto " e per lo spazio uso "%20"
+
+    il TAG "a", serve anche per collegare gli h3 o qualunque tag, con un id specifico
+-->
