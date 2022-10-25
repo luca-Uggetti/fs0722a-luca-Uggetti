@@ -1,0 +1,75 @@
+<!--
+    TABELLE, come vengono costruite:
+la tabella veniva utilizzata in maniera impropria, quindi in alcuni casi 
+venivano fatte delle tabelle per impaginare, ora si utiliza per dati e basta
+come sono fatte :
+
+-<table> (questo è il contenitore)
+    <tr> (colonne) 
+        <td></td> (celle)
+    </tr>
+</table>
+per dargli proprio la forma della tabella devo :
+<style>
+    table td{
+        border: 3px solid black; così ci delimito le celle della tabella
+    }
+</style>
+per una maggior semantica ci devo metter:
+<thead></thead> in cui al suo interno ci metto la descrizione delle colonne
+<tbody></tbody> ci metto le righe
+<tfoot></tfoot> e all'interno ci metto dei dati nuovi dati coclusivi
+per aggiungerci una  mini descrizione al di sopra della tabella uso il tag <caption></caption>
+
+posso utilizzare l'attributo "colspan ="un numero" " fa si che un solo dato prenda gli spazi in orizzontale descritti dal numero all'interno degli apici
+invece con l'attributo "rowspan="tot numero"" faccio la stessa cosa ma in verticale
+
+
+    FORM
+
+Questo tag,iventa il contenitore di questi campi:
+
+-input <input type="text/password/number/">, l'attributo "type="checkbox""" ci metto il quadratino cliccabile affianco, per collegarci un testo, metto il tag <label for="ci metto l'id dato al mio input dove ho meso la checkbox", staccato dal mio input
+
+-select, non è self-closing, la uso quando c'è bisogno che l'utente scelga il valore
+    <select>
+        <option></option>
+    </select>
+    con l'attriuto "value" all'interno del tag "option" gli do delle opzioni
+
+-textarea, campo che permette l'inserimento di u testo, non è self-closing
+se ci metto gli atributi all'interno dell'apertura:
+-cols, per aumentare la larghezza
+-row, per l'altezza 
+
+per mandare il form, uso il tag:
+<button></button>
+attributi di button:
+- button= non invia niente
+- submit= invia il form
+- reset = cancella i dati scritti
+
+per mandare il tutto però, devo applicare a tutto quello che voglio mandare un attributo name="qua ci metto il nome", uno a uno per ogi campo che voglio mandare
+
+N.B
+per indicare cosa voglio scriverci dentro, uso "PLACEHOLDER="quello che voglio che scriva"
+
+posso pulire l'invio dell'indirizzo con l'attributo "method="post"" all'interno dell'apertura di FORM
+sempre all'interno dell'apertura di form, se ci metto l'attributo "action="qualcosa.php"" che dice che "quando dai l'invio, vai ad un altra pagina"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+come mandare la repository tutti i giorni:
+
+faccio una cartella con un nominativo a caso
+dentro apro un visual studio code
+faccio:
+- nuovo terminale
+-copio il link dentro "code" all'interno del tab "code"
+-apro un nuovo terminale e scrivo "git clone " "e incollo il link copiato"
+
+
+---------------------------------------------------------------------------------------
+AUDIO / VIDEO:
+
+------------------------------------------------------------------------------------------
+-->
+repository di michele(prof)https://github.com/captain-mike/fs0722a-Michele-Tedesco
