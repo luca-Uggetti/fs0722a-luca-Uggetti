@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calcolatrice - scientifica</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  
+  <form name="sci-calc">
+   <table class="calculator" cellspacing="0" cellpadding="1">
+     <tr>
+       <td colspan="5"><input id="display" name="display" value="0" size="28" maxlength="25"></td><!--sto dando la grandezza del mio display, grande quanto 5 tasti-->
+     </tr>
+     <tr>
+      <!-- dichiarazione variabili e allocazione nel display,dei bottoni della prima riga-->
+       <td><input type="button" class="btnTop" name="btnTop" value="C" onclick="this.form.display.value=  0 "></td>
+       <td><input type="button" class="btnTop" name="btnTop" value="<--" onclick="deleteChar(this.form.display)"></td>
+       <td><input type="button" class="btnTop" name="btnTop" value="=" onclick="if(checkNum(this.form.display.value)) { compute(this.form) }"></td>
+       <td><input type="button" class="btnOpps" name="btnOpps" value="&#960;" onclick="addChar(this.form.display,'3.14159265359')"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="%" onclick=" percent(this.form.display)"></td>
+      <!-- fine  prima riga -->
+      </tr>
+     <tr>
+      <!--ho messo agli operatori in cui avrei messo successivamente un numero il "onclick=addChar" 
+       e il "this.form.display, '' " serve per dire [prendimi il valore che  ho cliccato  e mettimelo nel display] -->
+       <td><input type="button" class="btnNum" name="btnNum" value="7" onclick="addChar(this.form.display, '7')"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="8" onclick="addChar(this.form.display, '8')"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="9" onclick="addChar(this.form.display, '9')"></td>
+       <!--con questo if sto andando a verificare se prima ci ho messo un numero meno e le condizioni le ho verificate nel javascript-->
+       <td><input type="button" class="btnOpps" name="btnOpps" value="x&#94;" onclick="if(checkNum(this.form.display.value)) { exp(this.form) }"></td>
+       <!--alla riga 35 ho fatto la stessa cosa che alla riga 33 solo che nel javascript ho messo le condizioni per poter proseguire a scirvere o smettere-->
+       <td><input type="button" class="btnMath" name="btnMath" value="/" onclick="addChar(this.form.display, '/')"></td>
+    <!--fine dichiarazioni seconda riga-->
+       <tr>
+        <!--inizio dichiarazioni, con condizioni e allocazione nel display-->
+       <td><input type="button" class="btnNum" name="btnNum" value="4" onclick="addChar(this.form.display, '4')"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="5" onclick="addChar(this.form.display, '5')"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="6" onclick="addChar(this.form.display, '6')"></td>
+       <td><input type="button" class="btnOpps" name="btnOpps" value="ln" onclick="if(checkNum(this.form.display.value)) { ln(this.form) }"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="*" onclick="addChar(this.form.display, '*')"></td>
+      </tr>
+      <tr>
+       <!--inizio dichiarazioni, con condizioni e allocazione di memmoria terza riga-->
+       <td><input type="button" class="btnNum" name="btnNum" value="1" onclick="addChar(this.form.display, '1')"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="2" onclick="addChar(this.form.display, '2')"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="3" onclick="addChar(this.form.display, '3')"></td>
+       <td><input type="button" class="btnOpps" name="btnOpps" value="&radic;" onclick="if(checkNum(this.form.display.value)) { sqrt(this.form) }"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="-" onclick="addChar(this.form.display, '-')"></td>
+        <!--fine terza riga-->
+      </tr>
+     <tr>
+      <!--inizio dichiarazioni, con condizioni e allocazione di memmoria quarta riga-->
+       <td><input type="button" class="btnMath" name="btnMath" value="&#177" onclick="changeSign(this.form.display)"></td>
+       <td><input type="button" class="btnNum" name="btnNum" value="0" onclick="addChar(this.form.display, '0')"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="&#46;" onclick="addChar(this.form.display, '&#46;')"></td>
+       <td><input type="button" class="btnOpps" name="btnOpps" value="x&#50;" onclick="if(checkNum(this.form.display.value)) { square(this.form) }"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="+" onclick="addChar(this.form.display, '+')"></td>
+     <!--fine quarta riga-->
+      </tr>
+     <tr>
+       <!--inizio dichiarazioni, con condizioni e allocazione di memmoria quinta riga-->
+       <td><input type="button" class="btnMath" name="btnMath" value="(" onclick="addChar(this.form.display, '(')"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value=")" onclick="addChar(this.form.display,')')"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="cos" onclick="if(checkNum(this.form.display.value)) { cos(this.form) }"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="seno" onclick="if(checkNum(this.form.display.value)) { sin(this.form) }"></td>
+       <td><input type="button" class="btnMath" name="btnMath" value="cos." onclick="if(checkNum(this.form.display.value)) { tan(this.form) }"></td>
+      <!--fine quinta riga-->
+      </tr>
+   </tabel>
+  </form>
+  
+  <script src="index.js"></script><!--collegamento alla pagina scritta in Javascript-->
+</body>
+</html>
+       
