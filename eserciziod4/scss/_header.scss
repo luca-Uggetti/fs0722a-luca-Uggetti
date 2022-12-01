@@ -1,0 +1,23 @@
+header{
+  
+background: rgb(255,255,255);
+background: linear-gradient(36deg, rgba(255,255,255,1) 24%, rgba(28,121,9,1) 48%, rgba(255,0,9,1) 73%);
+    border-radius: 15px;
+    box-shadow: 0 0 10px black;
+    position: sticky;
+    top: 0;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            li{
+                font-family: sans-serif;
+                list-style: none;
+                padding: 1em 0;
+                a{
+                color: black;
+                text-decoration: none;
+                font-size: 1.4rem;
+                }
+            }
+        }
+    }
