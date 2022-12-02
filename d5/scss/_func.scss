@@ -1,0 +1,15 @@
+$template:white;
+$bg-dark:#000;
+$fg-dark:rgb(215, 33, 33);
+$bg-bright:rgb(150, 150, 150);
+$fg-bright:rgb(0, 0, 0);
+@mixin colors {
+    @if $template==dark{
+        background-color: $bg-dark;
+        color: $fg-dark;
+    }
+    @if $template==bright{
+        background-color: $bg-bright;
+        color: $fg-dark
+    }
+}

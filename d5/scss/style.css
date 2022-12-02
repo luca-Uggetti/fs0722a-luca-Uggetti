@@ -1,0 +1,70 @@
+header {
+  background-color: #6b17f1;
+}
+
+.container.d-flex {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+section {
+  background-image: url(../img/pexels-aleksandar-pasaric-325185.jpg);
+  background-attachment: fixed;
+  padding-left: 3rem;
+  background-size: cover;
+  min-height: 50vh;
+}
+section p {
+  margin-bottom: 0;
+}
+section button {
+  background: #6b17f1;
+  color: white;
+}
+
+.mycont {
+  position: absolute;
+}
+
+.mycont1 {
+  position: absolute;
+}
+
+.paragr {
+  font-size: 0.5rem;
+}
+
+.prima {
+  margin-bottom: 15rem;
+}
+
+.immagine {
+  width: 30%;
+}
+
+.clienti {
+  margin-top: 10rem;
+}
+
+.carousel-item {
+  margin-top: 3%;
+  text-align: center;
+}
+.carousel-item p {
+  font-size: 0.8rem;
+  margin: 20px 20%;
+  line-height: 2em;
+}
+.carousel-item img {
+  width: 5%;
+  border-radius: 50%;
+}
+.carousel-item h4 {
+  margin-top: 15px;
+  margin-bottom: 50px;
+}
+
+.finale {
+  background-color: #6b17f1;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
